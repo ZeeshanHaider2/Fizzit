@@ -12,7 +12,7 @@
     "server": "nodemon index.js",
     "client": "npm run start2 --prefix client",
     "start": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "npm install"
+    "heroku-postbuild": "npm i && npm i --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "",
   "license": "ISC",
