@@ -8,11 +8,11 @@
     "npm": "5.0.3"
   },
   "scripts": {
-    "start2": "node index.js",
+    "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "npm run start2 --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "npm i && npm i --only=dev --no-shrinkwrap && npm run build"
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION = false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
